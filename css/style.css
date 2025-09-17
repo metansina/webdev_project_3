@@ -131,3 +131,16 @@ article { margin-top: var(--space-3); }
   margin: 0 auto var(--space-3) auto;
   border: 2px solid var(--line);
 }
+
+/* Location */
+.location header h1 { text-align: center; }
+
+#map {
+  width: 100%;
+  max-width: 900px;
+  height: 420px;
+  border-radius: 12px;
+  margin: 0 auto;
+}
+
+
