@@ -12,7 +12,7 @@
   --space-3: 1.5rem;
   --space-4: 2rem;
 
-  --font-system: system-ui, sans-serif;
+  --font-system: system-ui, arial;
   --font-import: "Inter", var(--font-system);
 }
 
@@ -40,11 +40,9 @@ a { color: var(--accent); text-decoration: none; }
 a:hover, a:focus-visible { text-decoration: underline; }
 
 /* Horisontal line */
-hr {
-  border: 0;
-  height: 1px;
-  background: var(--line);
-  margin: var(--space-3) 0;
+.hline {
+  border-top: 1px solid var(--line);
+  margin: 20px 0;
 }
 
 /* Centered top navigation */
@@ -99,7 +97,7 @@ article { margin-top: var(--space-3); }
 }
 .cv header { text-align: center; }
 .cv header p { color: var(--muted); margin: 0.25em 0; }
-.cv section { padding: var(--space-2); border: 1px solid var(--line); border-radius: var(--space-1); }
+.cv section { padding: var(--space-2);  margin: var(--space-2); border: 1px solid var(--line); border-radius: var(--space-1); }
 .cv article { padding: var(--space-2); border-radius: var(--space-1); background: #f9fafb; }
 
 /* Portfolio fixed-width layout */
@@ -130,6 +128,53 @@ article { margin-top: var(--space-3); }
   max-width: 100%;
   margin: 0 auto var(--space-3) auto;
   border: 2px solid var(--line);
+}
+
+/* About - Mobile First*/
+/* Small screens */
+@media (min-width: 320px) {
+  .about .page {
+    width: 95vw;
+    padding: var(--space-2) var(--space-1);
+  }
+  .about h1 {
+    font-size: 1.5rem;
+    margin-bottom: var(--space-1);
+  }
+  .about h2 {
+    font-size: 1.2rem;
+    margin-bottom: var(--space-1);
+  }
+  .about img.portrait {
+    width: 80%;
+    margin-bottom: var(--space-2);
+  }
+  .about section {
+    margin-bottom: var(--space-2);
+  }
+}
+
+/* Tablet and larger screens */
+@media (min-width: 768px) {
+  .about .page {
+    width: min(85vw, 50rem);
+    padding: var(--space-3) var(--space-2);
+  }
+  .about h1 {
+    font-size: 2rem;
+    margin-bottom: var(--space-2);
+  }
+  .about h2 {
+    font-size: 1.4rem;
+    margin-bottom: var(--space-2);
+  }
+  .about img.portrait {
+    width: min(50%, 14rem);
+    margin-bottom: var(--space-3);
+  }
+  .about section {
+    margin-bottom: var(--space-3);
+  }
 }
 
 /* Location */
